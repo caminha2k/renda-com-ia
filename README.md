@@ -164,8 +164,7 @@
       </div>
 
       <div class="productCard">
-        <img class="cover" src="capa.png" alt="Capa do produto Renda com IA" /> 
-        <div class="price">
+        <div class="price"><img class="cover" src="capa.png" alt="Capa do produto Renda com IA" />
           <div class="from">De R$ 49,90</div>
           <div class="now">Por R$ 19,90</div>
           <div class="muted">Oferta por tempo limitado</div>

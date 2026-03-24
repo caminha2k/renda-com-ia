@@ -1,4 +1,4 @@
-RENDA COM IA Do Zero ao Primeiro Dinheiro com o Celular
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -12,59 +12,62 @@ RENDA COM IA Do Zero ao Primeiro Dinheiro com o Celular
       --muted:#9ca3af;
       --primary:#00d4ff;
       --primaryText:#001018;
-      --stroke: rgba(255,255,255,.08);
+      --stroke: rgba(255,255,255,.10);
+      --shadow: 0 20px 60px rgba(0,0,0,.45);
     }
     *{box-sizing:border-box}
     body{
       margin:0;
       font-family: Arial, sans-serif;
-      background: radial-gradient(900px 500px at 50% -10%, rgba(0,212,255,.18), transparent 60%),
-                  radial-gradient(700px 400px at 10% 20%, rgba(99,102,241,.12), transparent 60%),
-                  var(--bg);
+      background:
+        radial-gradient(900px 500px at 50% -10%, rgba(0,212,255,.18), transparent 60%),
+        radial-gradient(700px 400px at 10% 20%, rgba(99,102,241,.12), transparent 60%),
+        var(--bg);
       color:var(--text);
     }
-    .container{max-width: 980px; margin:0 auto; padding: 48px 20px;}
-    .nav{display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:28px;}
-    .brand{font-weight:800; letter-spacing:.3px;}
-    .pill{
-      display:inline-flex; align-items:center; gap:8px;
-      border:1px solid var(--stroke); padding:8px 12px; border-radius:999px;
-      color:var(--muted); font-size:14px;
-      background: rgba(17,24,39,.5);
-      backdrop-filter: blur(6px);
-    }
-
+    a{color:inherit}
+    .container{max-width: 1020px; margin:0 auto; padding: 42px 20px 90px;}
     .hero{
       display:grid;
       grid-template-columns: 1.1fr .9fr;
-      gap: 22px;
+      gap: 20px;
       align-items:center;
       padding: 26px;
       border:1px solid var(--stroke);
-      border-radius: 16px;
+      border-radius: 18px;
       background: rgba(17,24,39,.55);
+      box-shadow: var(--shadow);
       backdrop-filter: blur(8px);
     }
-    @media (max-width: 860px){ .hero{grid-template-columns:1fr; text-align:center;} }
+    @media (max-width: 900px){ .hero{grid-template-columns:1fr; text-align:center;} }
 
-    h1{margin:0; font-size: 42px; line-height:1.05; color: var(--primary);}
-    .sub{margin: 14px 0 0; font-size:18px; line-height:1.5; color:var(--text);}
-    .muted{color:var(--muted);}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      border:1px solid var(--stroke);
+      padding:8px 12px;
+      border-radius:999px;
+      color:var(--muted);
+      font-size:14px;
+      background: rgba(17,24,39,.4);
+    }
 
+    h1{margin:12px 0 0; font-size: 42px; line-height:1.05; color: var(--primary);}
+    .sub{margin: 12px 0 0; font-size:18px; line-height:1.55; color:var(--text);}
+    .muted{color:var(--muted); font-size:14px; line-height:1.45;}
     .ctaRow{display:flex; gap:12px; align-items:center; margin-top:18px; flex-wrap:wrap;}
-    @media (max-width: 860px){ .ctaRow{justify-content:center;} }
+    @media (max-width: 900px){ .ctaRow{justify-content:center;} }
 
     .btn{
       display:inline-block;
       padding: 14px 18px;
       background: var(--primary);
       color: var(--primaryText);
-      font-weight: 800;
+      font-weight: 900;
       text-decoration:none;
       border-radius: 12px;
       border:1px solid rgba(0,0,0,.2);
     }
-    .btn:hover{filter:brightness(1.05)}
+    .btn:hover{filter:brightness(1.06)}
     .btnSecondary{
       display:inline-block;
       padding: 14px 18px;
@@ -75,9 +78,21 @@ RENDA COM IA Do Zero ao Primeiro Dinheiro com o Celular
       border:1px solid var(--stroke);
     }
 
+    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px;}
+    @media (max-width: 900px){ .grid3{grid-template-columns:1fr;} }
+
+    .card{
+      padding: 14px;
+      border-radius: 14px;
+      border:1px solid var(--stroke);
+      background: rgba(17,24,39,.40);
+    }
+    .card h3{margin:0 0 8px; font-size:16px;}
+    .card p{margin:0; color:var(--muted); line-height:1.45; font-size:14px;}
+
     .productCard{
       border:1px solid var(--stroke);
-      border-radius: 16px;
+      border-radius: 18px;
       padding: 16px;
       background: rgba(11,15,26,.6);
     }
@@ -88,34 +103,55 @@ RENDA COM IA Do Zero ao Primeiro Dinheiro com o Celular
       border-radius: 12px;
       border:1px solid var(--stroke);
       background: rgba(255,255,255,.03);
+      display:block;
     }
-    .price{
+    .offerBox{
       margin-top:12px;
-      padding: 12px;
-      border-radius: 12px;
-      border:1px solid var(--stroke);
-      background: rgba(17,24,39,.55);
-      text-align:center;
-    }
-    .from{color:var(--muted); text-decoration: line-through;}
-    .now{font-size: 22px; font-weight: 900;}
-    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px;}
-    @media (max-width: 860px){ .grid3{grid-template-columns:1fr;} }
-
-    .card{
       padding: 14px;
       border-radius: 14px;
       border:1px solid var(--stroke);
-      background: rgba(17,24,39,.45);
+      background: rgba(17,24,39,.55);
+      text-align:left;
     }
-    .card h3{margin:0 0 8px; font-size:16px;}
-    .card p{margin:0; color:var(--muted); line-height:1.45; font-size:14px;}
+    .priceRow{
+      display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap;
+      margin-bottom:10px;
+    }
+    .from{color:var(--muted); text-decoration: line-through;}
+    .now{font-size: 24px; font-weight: 1000;}
+    .checklist{margin:10px 0 0; padding:0; list-style:none;}
+    .checklist li{margin:8px 0; color:var(--text); font-size:14px;}
+    .checklist li span{color:var(--primary); font-weight:900;}
 
-    .section{margin-top: 28px;}
+    .section{margin-top: 26px;}
     .section h2{margin:0 0 10px; font-size: 22px;}
+    .twoCol{display:grid; grid-template-columns: 1fr 1fr; gap: 12px;}
+    @media (max-width: 900px){ .twoCol{grid-template-columns:1fr;} }
+
+    /* Depoimentos */
     .testimonials{display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px;}
-    @media (max-width: 860px){ .testimonials{grid-template-columns:1fr;} }
-    .quote{font-size:14px; color:var(--text); line-height:1.5;}
+    @media (max-width: 900px){ .testimonials{grid-template-columns:1fr;} }
+
+    .chat{
+      position:relative;
+      border-radius: 14px;
+      border:1px solid var(--stroke);
+      background: rgba(17,24,39,.42);
+      padding: 14px;
+    }
+    .chat:before{
+      content:"";
+      position:absolute;
+      top: 18px;
+      left: 12px;
+      width: 10px;
+      height: 10px;
+      background: rgba(17,24,39,.42);
+      border-left: 1px solid var(--stroke);
+      border-bottom: 1px solid var(--stroke);
+      transform: rotate(45deg);
+    }
+    .quote{font-size:14px; line-height:1.55; color:var(--text);}
     .who{margin-top:10px; color:var(--muted); font-size:13px;}
 
     details{
@@ -125,52 +161,132 @@ RENDA COM IA Do Zero ao Primeiro Dinheiro com o Celular
       background: rgba(17,24,39,.35);
     }
     details + details{margin-top:10px;}
-    summary{cursor:pointer; font-weight:700;}
-    footer{margin-top:32px; text-align:center; color:var(--muted); font-size:13px;}
+    summary{cursor:pointer; font-weight:800;}
+
+    footer{margin-top:30px; text-align:center; color:var(--muted); font-size:13px;}
+
+    /* Botão fixo no mobile */
+    .stickyCta{
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      padding: 12px 12px;
+      background: rgba(11,15,26,.75);
+      border-top: 1px solid var(--stroke);
+      backdrop-filter: blur(10px);
+      display:none;
+      z-index: 9999;
+    }
+    .stickyCta .wrap{
+      max-width: 1020px;
+      margin: 0 auto;
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .stickyCta .mini{
+      font-size:13px;
+      color: var(--muted);
+      line-height:1.25;
+    }
+    @media (max-width: 900px){
+      .stickyCta{display:block;}
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="nav">
-      <div class="brand">Renda com IA</div>
-      <div class="pill">📱 Feito para iniciantes • Comece hoje</div>
-    </div>
-
     <div class="hero">
       <div>
+        <div class="pill">📱 Feito para iniciantes • Método simples • Comece hoje</div>
+
         <h1>💰 Renda com IA</h1>
-        <p class="sub">Aprenda a ganhar dinheiro usando apenas o celular e Inteligência Artificial, com um método simples e direto.</p>
+        <p class="sub">
+          Faça sua primeira renda usando IA pelo celular, mesmo começando do zero.
+        </p>
+        <p class="muted">
+          Acesso imediato após a compra. Pagamento seguro via Kiwify.
+        </p>
 
         <div class="ctaRow">
           <a class="btn" href="https://pay.kiwify.com.br/m1UbXtE" target="_blank" rel="noopener noreferrer">COMPRAR AGORA</a>
           <a class="btnSecondary" href="#depoimentos">Ver depoimentos</a>
-          <span class="muted">Pagamento seguro via Kiwify</span>
         </div>
 
         <div class="grid3">
           <div class="card">
             <h3>✅ Passo a passo</h3>
-            <p>Você sabe exatamente o que fazer do zero, sem enrolação.</p>
+            <p>Você sabe exatamente o que fazer e como aplicar.</p>
           </div>
           <div class="card">
-            <h3>✅ Sem computador</h3>
-            <p>Estratégia pensada para fazer pelo celular, de forma prática.</p>
+            <h3>✅ Só pelo celular</h3>
+            <p>Feito para executar no dia a dia, sem computador.</p>
           </div>
           <div class="card">
             <h3>✅ Pra iniciantes</h3>
-            <p>Explicado no simples, com foco em execução e resultado.</p>
+            <p>Explicado no simples, com foco em resultado.</p>
           </div>
         </div>
       </div>
 
       <div class="productCard">
-       <img class="cover" src="capa.png" alt="Capa do produto Renda com IA" />
-          <div class="from">De R$ 49,90</div>
-          <div class="now">Por R$ 19,90</div>
-          <div class="muted">Oferta por tempo limitado</div>
+        <img class="cover" src="capa.png" alt="Capa do produto Renda com IA" />
+
+        <div class="offerBox">
+          <div class="priceRow">
+            <div>
+              <div class="from">De R$ 49,90</div>
+              <div class="now">Por R$ 19,90</div>
+            </div>
+            <div class="muted">Oferta por tempo limitado</div>
+          </div>
+
+          <ul class="checklist">
+            <li><span>✅</span> eBook completo</li>
+            <li><span>✅</span> Prompts prontos de IA</li>
+            <li><span>✅</span> Lista de ideias de vídeos</li>
+            <li><span>✅</span> Mini aula exclusiva</li>
+          </ul>
+
+          <div class="ctaRow" style="justify-content:center;">
+            <a class="btn" href="https://pay.kiwify.com.br/m1UbXtE" target="_blank" rel="noopener noreferrer">QUERO COMEÇAR</a>
+          </div>
         </div>
-        <div class="ctaRow" style="justify-content:center;">
-          <a class="btn" href="https://pay.kiwify.com.br/m1UbXtE" target="_blank" rel="noopener noreferrer">QUERO COMEÇAR</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>O que você recebe</h2>
+      <div class="twoCol">
+        <div class="card">
+          <h3>📘 eBook completo</h3>
+          <p>Um caminho simples para começar a aplicar e sair do zero.</p>
+        </div>
+        <div class="card">
+          <h3>⚡ Prompts prontos</h3>
+          <p>Comandos de IA para agilizar criação e execução.</p>
+        </div>
+        <div class="card">
+          <h3>🎥 Ideias de vídeos</h3>
+          <p>Ideias para conteúdo que você consegue produzir rápido.</p>
+        </div>
+        <div class="card">
+          <h3>🎓 Mini aula</h3>
+          <p>Conteúdo direto ao ponto para destravar a aplicação.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Para quem é</h2>
+      <div class="twoCol">
+        <div class="card">
+          <h3>✅ É pra você se...</h3>
+          <p>Quer um método simples para começar, usando o celular e IA, sem complicação.</p>
+        </div>
+        <div class="card">
+          <h3>🚫 Não é pra você se...</h3>
+          <p>Está buscando “dinheiro fácil” sem aplicar nada. Aqui o foco é execução.</p>
         </div>
       </div>
     </div>
@@ -178,32 +294,49 @@ RENDA COM IA Do Zero ao Primeiro Dinheiro com o Celular
     <div class="section" id="depoimentos">
       <h2>O que as pessoas estão dizendo</h2>
       <div class="testimonials">
-        <div class="card">
-          <div class="quote">“mano comprei aquele ebook de renda com IA<br>não botei fé no começo<br>mas fiz minha primeira venda em 3 dias kkk”</div>
-          <div class="who">— Lucas M., SP (WhatsApp)</div>
+        <div class="chat">
+          <div class="quote">
+            “mano comprei aquele ebook de renda com IA”<br>
+            “não botei fé no começo”<br>
+            “mas fiz minha primeira venda em 3 dias kkk”
+          </div>
+          <div class="who">— Lucas M., SP</div>
         </div>
-        <div class="card">
-          <div class="quote">“sério, isso funciona mesmo?<br>eu comecei ontem e já tô criando conteúdo com IA<br>nunca foi tão fácil 😳”</div>
-          <div class="who">— Ana C., RJ (Instagram DM)</div>
-        </div>
-        <div class="card">
-          <div class="quote">“comprei e valeu a pena demais<br>é simples mas abre a mente<br>já comecei a aplicar tudo”</div>
-          <div class="who">— João P., MG (Comentário)</div>
-        </div>
-      </div>
 
-      <div class="testimonials" style="margin-top:12px;">
-        <div class="card">
-          <div class="quote">“já fiz 2 vendas hoje 😳<br>usei aquele método do ebook<br>top demais”</div>
-          <div class="who">— Marcos L., BA (WhatsApp)</div>
+        <div class="chat">
+          <div class="quote">
+            “sério, isso funciona mesmo?”<br>
+            “eu comecei ontem e já tô criando conteúdo com IA”<br>
+            “nunca foi tão fácil 😳”
+          </div>
+          <div class="who">— Ana C., RJ</div>
         </div>
-        <div class="card">
-          <div class="quote">“melhor coisa que comprei esse mês<br>tô usando IA pra tudo agora<br>já tô vendo resultado”</div>
-          <div class="who">— Camila R., PE (Direct)</div>
+
+        <div class="chat">
+          <div class="quote">
+            “comprei e valeu a pena demais”<br>
+            “é simples mas abre a mente”<br>
+            “já comecei a aplicar tudo”
+          </div>
+          <div class="who">— João P., MG</div>
         </div>
-        <div class="card">
-          <div class="quote">“Cliquei, comprei e comecei a aplicar. Material direto e fácil de seguir.”</div>
-          <div class="who">— Depoimento extra (opcional)</div>
+
+        <div class="chat">
+          <div class="quote">
+            “já fiz 2 vendas hoje 😳”<br>
+            “usei aquele método do ebook”<br>
+            “top demais”
+          </div>
+          <div class="who">— Marcos L., BA</div>
+        </div>
+
+        <div class="chat">
+          <div class="quote">
+            “melhor coisa que comprei esse mês”<br>
+            “tô usando IA pra tudo agora”<br>
+            “já tô vendo resultado”
+          </div>
+          <div class="who">— Camila R., PE</div>
         </div>
       </div>
     </div>
@@ -225,6 +358,16 @@ RENDA COM IA Do Zero ao Primeiro Dinheiro com o Celular
     </div>
 
     <footer>© Digital Labs</footer>
+  </div>
+
+  <div class="stickyCta">
+    <div class="wrap">
+      <div class="mini">
+        <strong>R$ 19,90</strong><br>
+        Pagamento seguro (Kiwify)
+      </div>
+      <a class="btn" href="https://pay.kiwify.com.br/m1UbXtE" target="_blank" rel="noopener noreferrer">COMPRAR AGORA</a>
+    </div>
   </div>
 </body>
 </html>

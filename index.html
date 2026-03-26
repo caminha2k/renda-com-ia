@@ -1,205 +1,647 @@
 
-</style> html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ganhe Dinheiro com IA</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ganhe Dinheiro com IA</title>
+  <meta name="description" content="Aprenda a ganhar dinheiro com IA usando apenas o celular, mesmo começando do zero." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #08111f;
+      --bg-soft: #101a2e;
+      --card: rgba(255,255,255,0.06);
+      --card-border: rgba(255,255,255,0.12);
+      --text: #f5f7fb;
+      --muted: #c8d2e3;
+      --primary: #00e0ff;
+      --primary-2: #7c4dff;
+      --accent: #19f5a3;
+      --warning: #ffb84d;
+      --danger: #ff5d73;
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
+      --radius: 24px;
+      --radius-sm: 16px;
+      --max: 1120px;
+    }
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial;
-    background: linear-gradient(135deg,#020617,#0f172a);
-    color: white;
-    text-align: center;
-}
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(0,224,255,0.18), transparent 26%),
+        radial-gradient(circle at top right, rgba(124,77,255,0.18), transparent 24%),
+        linear-gradient(180deg, #08111f 0%, #0c1324 45%, #07101d 100%);
+      line-height: 1.6;
+    }
 
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-}
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(92%, var(--max)); margin: 0 auto; }
+    .section { padding: 88px 0; }
 
-h1 {
-    font-size: 38px;
-}
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      background: rgba(0,224,255,0.1);
+      border: 1px solid rgba(0,224,255,0.18);
+      color: #dffcff;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
 
-.btn {
-    background: #22c55e;
-    padding: 18px 30px;
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 25px;
-    border-radius: 10px;
-    font-size: 18px;
-    animation: pulse 1.5s infinite;
-}
+    .hero {
+      padding: 28px 0 72px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.07); }
-    100% { transform: scale(1); }
-}
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 0;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(14px);
+      background: rgba(8,17,31,0.6);
+      z-index: 20;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
 
-.section {
-    margin-top: 60px;
-}
+    .brand {
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: 0.2px;
+    }
 
-.card {
-    background: #1e293b;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 12px;
-}
+    .brand span {
+      color: var(--primary);
+    }
 
-.price {
-    font-size: 32px;
-    color: #22c55e;
-}
+    .nav-cta, .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 24px;
+      border-radius: 14px;
+      font-weight: 800;
+      transition: .25s ease;
+      border: 1px solid transparent;
+    }
 
-.timer {
-    font-size: 28px;
-    color: #ef4444;
-    margin-top: 15px;
-}
+    .btn-primary, .nav-cta {
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      color: white;
+      box-shadow: 0 14px 30px rgba(0, 170, 255, 0.25);
+    }
 
-.highlight {
-    color: #22c55e;
-    font-weight: bold;
-}
+    .btn-primary:hover, .nav-cta:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.06);
+    }
 
-.fake {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background: #22c55e;
-    padding: 10px 15px;
-    border-radius: 10px;
-    font-size: 14px;
-    display: none;
-}
+    .btn-outline {
+      border-color: rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+    }
 
-.online {
-    color: #22c55e;
-    margin-top: 10px;
-}
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.09);
+    }
 
-</style>
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      align-items: center;
+      gap: 42px;
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 6vw, 4.5rem);
+      line-height: 1.04;
+      font-weight: 900;
+      letter-spacing: -1.8px;
+      margin-bottom: 18px;
+    }
+
+    h1 .highlight {
+      background: linear-gradient(135deg, #ffffff 0%, #7ceeff 38%, #8ca0ff 70%, #c77dff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 640px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .trust-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: #dce7f8;
+      font-size: 15px;
+    }
+
+    .trust-row div {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(0,224,255,0.22), transparent 68%);
+      top: -40px;
+      right: -40px;
+    }
+
+    .book-cover {
+      min-height: 480px;
+      border-radius: 22px;
+      background:
+        linear-gradient(160deg, rgba(124,77,255,0.9), rgba(0,224,255,0.9)),
+        #111;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      isolation: isolate;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
+    }
+
+    .book-cover::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(255,255,255,0.2), transparent 28%);
+      z-index: -1;
+    }
+
+    .book-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 700;
+      opacity: .92;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+    }
+
+    .book-title {
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 0.98;
+      font-weight: 900;
+      letter-spacing: -1.5px;
+      text-transform: uppercase;
+    }
+
+    .book-title span { color: #0a1120; background: #fff; padding: 0 10px; border-radius: 10px; display: inline-block; }
+
+    .book-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 16px;
+      font-size: 14px;
+      color: rgba(255,255,255,.92);
+    }
+
+    .price-card {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .mini-card {
+      padding: 16px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      text-align: center;
+    }
+
+    .mini-card strong {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1.08;
+      margin-bottom: 14px;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+
+    .section-text {
+      color: var(--muted);
+      max-width: 720px;
+      margin-bottom: 36px;
+      font-size: 1.05rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-sm);
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .feature .icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      font-size: 24px;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, rgba(0,224,255,0.16), rgba(124,77,255,0.16));
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .feature h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .feature p { color: var(--muted); }
+
+    .offer {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .offer-box, .offer-list {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .price {
+      font-size: 3.2rem;
+      line-height: 1;
+      font-weight: 900;
+      margin: 16px 0 8px;
+    }
+
+    .old-price {
+      color: #9fb0c8;
+      text-decoration: line-through;
+      font-size: 1rem;
+    }
+
+    .offer-note {
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .check-list div {
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .check-list strong { color: white; }
+
+    .bonus {
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(25,245,163,0.12), rgba(0,224,255,0.10));
+      border: 1px solid rgba(25,245,163,0.22);
+    }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .testimonial {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-sm);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .stars {
+      margin-bottom: 16px;
+      font-size: 18px;
+    }
+
+    .testimonial p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .testimonial strong {
+      font-size: 0.96rem;
+    }
+
+    .faq {
+      display: grid;
+      gap: 14px;
+    }
+
+    details {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 18px 20px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+    details p { color: var(--muted); margin-top: 12px; }
+
+    .urgent {
+      text-align: center;
+      padding: 30px;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(255,93,115,0.14), rgba(255,184,77,0.14));
+      border: 1px solid rgba(255,184,77,0.18);
+      box-shadow: var(--shadow);
+    }
+
+    .urgent h3 {
+      font-size: 1.7rem;
+      margin-bottom: 10px;
+    }
+
+    .urgent p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .footer {
+      padding: 28px 0 44px;
+      color: #9fb0c8;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .offer,
+      .grid-3,
+      .testimonials,
+      .price-card {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 16px;
+      }
+
+      .book-cover { min-height: 380px; }
+    }
+
+    @media (max-width: 640px) {
+      .section { padding: 72px 0; }
+      .nav { padding: 18px 0; }
+      .nav-cta { display: none; }
+      .hero-actions { flex-direction: column; }
+      .btn, .hero-actions a { width: 100%; }
+      .offer-box, .offer-list, .feature, .testimonial { padding: 22px; }
+      .price { font-size: 2.7rem; }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="container">
+    <header class="nav">
+      <a href="#top" class="brand">Renda com <span>IA</span></a>
+      <a class="nav-cta" href="https://pay.kiwify.com.br/m1UbXtE" target="_blank" rel="noopener noreferrer">Comprar agora</a>
+    </header>
+  </div>
 
-<div class="container">
+  <main id="top" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge">🔥 Método simples para começar pelo celular</div>
+        <h1>Ganhe dinheiro com <span class="highlight">IA</span> mesmo começando do zero</h1>
+        <p class="subtitle">Descubra um passo a passo direto para usar ferramentas de inteligência artificial e transformar o seu celular em uma fonte de renda extra, sem complicação e sem precisar aparecer.</p>
 
-<h1>💸 Ganhe Dinheiro com IA usando apenas o celular</h1>
-<p>Mesmo começando do zero</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://pay.kiwify.com.br/m1UbXtE" target="_blank" rel="noopener noreferrer">QUERO COMEÇAR AGORA</a>
+          <a class="btn btn-outline" href="#oferta">Ver oferta</a>
+        </div>
 
-<div class="online" id="online"></div>
-<div class="timer" id="timer"></div>
+        <div class="trust-row">
+          <div>✅ Acesso imediato</div>
+          <div>📱 Feito para celular</div>
+          <div>🚀 Linguagem simples</div>
+        </div>
+      </div>
 
-<a href="https://pay.kiwify.com.br/m1UbXtE" class="btn">QUERO COMEÇAR AGORA</a>
+      <div class="hero-card">
+        <div class="book-cover" style="background:none;padding:0;box-shadow:none;min-height:auto;">
+          <img src="capa-ebook.png" alt="Capa do Ebook Ganhe Dinheiro com IA usando apenas o celular" style="width:100%;border-radius:22px;box-shadow:0 20px 40px rgba(0,0,0,0.4);">
+        </div>
 
-<div class="section">
-<h2>😓 Cansado de não saber como ganhar dinheiro online?</h2>
-<p>Você não precisa de experiência, computador caro ou cursos difíceis.</p>
-</div>
+        <div class="price-card">
+          <div class="mini-card">
+            <strong>R$ 19,90</strong>
+            <span>Pagamento único</span>
+          </div>
+          <div class="mini-card">
+            <strong>Na hora</strong>
+            <span>Liberação imediata</span>
+          </div>
+          <div class="mini-card">
+            <strong>Passo a passo</strong>
+            <span>Sem enrolação</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
-<div class="section">
-<h2>🔥 O que você vai descobrir:</h2>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">O que você vai aprender</h2>
+      <p class="section-text">Seu site atual tem a base certa, mas faltava impacto visual, hierarquia de informação e mais confiança para aumentar cliques no botão de compra. Aqui está uma versão mais profissional e mais convincente.</p>
 
-<div class="card">📱 Como usar apenas o celular</div>
-<div class="card">🤖 Ferramentas de IA grátis</div>
-<div class="card">💰 Estratégias reais de lucro</div>
+      <div class="grid-3">
+        <article class="feature">
+          <div class="icon">📲</div>
+          <h3>Usando só o celular</h3>
+          <p>Aprenda formas simples de começar sem computador caro, com ferramentas fáceis de usar no dia a dia.</p>
+        </article>
 
-</div>
+        <article class="feature">
+          <div class="icon">🤖</div>
+          <h3>Ferramentas de IA grátis</h3>
+          <p>Descubra recursos acessíveis para criar conteúdo, automatizar tarefas e vender mais gastando pouco.</p>
+        </article>
 
-<div class="section">
-<h2>🎁 BÔNUS EXCLUSIVO</h2>
+        <article class="feature">
+          <div class="icon">💸</div>
+          <h3>Estratégias reais de lucro</h3>
+          <p>Veja caminhos práticos para transformar conhecimento em renda extra mesmo começando do absoluto zero.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-<div class="card">📦 Lista de prompts prontos de IA</div>
-<div class="card">🚀 Estratégia para ganhar dinheiro rápido</div>
+  <section id="oferta" class="section">
+    <div class="container offer">
+      <div class="offer-box">
+        <div class="badge">🎁 Oferta especial</div>
+        <h2 class="section-title">Apresentando o ebook</h2>
+        <p class="offer-note">Um guia simples, visual e direto para você começar hoje mesmo a usar IA para gerar renda extra.</p>
+        <div class="old-price">De R$ 47,90</div>
+        <div class="price">R$ 19,90</div>
+        <p class="offer-note">Acesso imediato após a confirmação do pagamento.</p>
+        <a class="btn btn-primary" style="width:100%;" href="https://pay.kiwify.com.br/m1UbXtE" target="_blank" rel="noopener noreferrer">COMPRAR AGORA</a>
 
-</div>
+        <div class="bonus">
+          <strong>🎯 Bônus exclusivo:</strong>
+          <p style="margin-top:8px; color: var(--muted);">Lista de prompts prontos de IA + estratégia rápida para acelerar seus primeiros resultados.</p>
+        </div>
+      </div>
 
-<div class="section">
-<h2>📘 Apresentando o Ebook</h2>
-<p>Um guia simples e direto para você começar HOJE</p>
-<p class="price">R$ 19,90</p>
+      <div class="offer-list">
+        <h3 style="font-size: 1.5rem; margin-bottom: 18px;">O que está incluso</h3>
+        <div class="check-list">
+          <div><strong>✔ Ebook principal</strong><br>Passo a passo simples para quem está começando.</div>
+          <div><strong>✔ Métodos práticos</strong><br>Ideias que você pode adaptar para vender online.</div>
+          <div><strong>✔ Ferramentas recomendadas</strong><br>Opções de IA acessíveis para iniciar sem complicação.</div>
+          <div><strong>✔ Bônus de prompts</strong><br>Modelos prontos para economizar tempo e ter mais clareza.</div>
+          <div><strong>✔ Acesso rápido</strong><br>Comprou, recebeu. Sem esperar dias para começar.</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<p>🔥 Acesso imediato após pagamento</p>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Quem comprou aprovou</h2>
+      <p class="section-text">Depoimentos bem apresentados aumentam confiança. Aqui eu transformei os seus textos em cards mais fortes visualmente.</p>
 
-<a href="https://pay.kiwify.com.br/m1UbXtE" class="btn">COMPRAR AGORA</a>
-</div>
+      <div class="testimonials">
+        <article class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>“Em 2 semanas já fiz minhas primeiras vendas. O conteúdo é simples e me ajudou a sair da teoria para a prática.”</p>
+          <strong>Juliana S. · aluna</strong>
+        </article>
 
-<div class="section">
-<h2>💬 Depoimentos</h2>
+        <article class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>“Muito fácil e direto ao ponto. Consegui entender mesmo sem ter experiência com IA ou marketing.”</p>
+          <strong>Carlos M. · comprador</strong>
+        </article>
 
-<div class="card">"Em 2 semanas já fiz minhas primeiras vendas!"</div>
-<div class="card">"Muito fácil e direto ao ponto!"</div>
-<div class="card">"Já recuperei o investimento no primeiro dia!"</div>
+        <article class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>“Já recuperei o investimento rápido. O melhor foi ter um caminho simples para começar usando só o celular.”</p>
+          <strong>Ana P. · cliente</strong>
+        </article>
+      </div>
+    </div>
+  </section>
 
-</div>
+  <section class="section">
+    <div class="container">
+      <div class="urgent">
+        <h3>⚠️ Atenção: essa oferta pode sair do ar</h3>
+        <p>Garanta agora enquanto o valor promocional ainda está disponível e tenha acesso imediato ao material.</p>
+        <a class="btn btn-primary" href="https://pay.kiwify.com.br/m1UbXtE" target="_blank" rel="noopener noreferrer">GARANTIR MEU ACESSO</a>
+      </div>
+    </div>
+  </section>
 
-<div class="section">
-<h2>⚠️ ATENÇÃO</h2>
-<p>Essa oferta pode sair do ar a qualquer momento.</p>
-<p class="highlight">Garanta agora enquanto ainda está disponível.</p>
-</div>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Perguntas frequentes</h2>
+      <div class="faq">
+        <details>
+          <summary>Preciso ter experiência para aplicar?</summary>
+          <p>Não. O conteúdo foi pensado para iniciantes, com explicações simples e práticas.</p>
+        </details>
+        <details>
+          <summary>Funciona usando apenas o celular?</summary>
+          <p>Sim. A proposta é justamente mostrar como começar mesmo sem computador.</p>
+        </details>
+        <details>
+          <summary>Quando recebo o acesso?</summary>
+          <p>Assim que o pagamento for confirmado, o acesso é liberado imediatamente pela plataforma.</p>
+        </details>
+      </div>
+    </div>
+  </section>
 
-<a href="https://pay.kiwify.com.br/m1UbXtE" class="btn">GARANTIR MEU ACESSO</a>
-
-<div class="section">
-<h2>❓ Perguntas Frequentes</h2>
-
-<p><b>Preciso de experiência?</b> Não.</p>
-<p><b>Funciona no celular?</b> Sim.</p>
-<p><b>Quando recebo?</b> Na hora.</p>
-
-</div>
-
-</div>
-
-<div class="fake" id="fake"></div>
-
-<script>
-// CONTADOR
-let time = 600;
-
-setInterval(() => {
-    let m = Math.floor(time / 60);
-    let s = time % 60;
-    document.getElementById("timer").innerHTML =
-        "⏳ Oferta termina em: " + m + ":" + (s < 10 ? "0" + s : s);
-    time--;
-    if (time < 0) time = 600;
-}, 1000);
-
-// PESSOAS ONLINE
-setInterval(() => {
-    let people = Math.floor(Math.random() * 15) + 20;
-    document.getElementById("online").innerHTML =
-        "🔥 " + people + " pessoas vendo agora";
-}, 3000);
-
-// NOTIFICAÇÃO FAKE
-let names = ["Carlos", "Ana", "João", "Marcos", "Fernanda", "Lucas"];
-
-setInterval(() => {
-    let name = names[Math.floor(Math.random() * names.length)];
-    let el = document.getElementById("fake");
-
-    el.innerHTML = "💰 " + name + " acabou de comprar!";
-    el.style.display = "block";
-
-    setTimeout(() => {
-        el.style.display = "none";
-    }, 3000);
-
-}, 5000);
-
-</script>
-
+  <footer class="footer">
+    <div class="container">
+      © 2026 · Renda com IA · Todos os direitos reservados.
+    </div>
+  </footer>
 </body>
 </html>
+
